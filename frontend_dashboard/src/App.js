@@ -316,6 +316,12 @@ function App() {
 
         {err ? <div className="errorBox" role="alert">{err}</div> : null}
 
+        <div className="notice" role="status" aria-live="polite">
+          If you see demo data, the backend API endpoints may not be implemented yet. Configure{" "}
+          <code>REACT_APP_API_BASE</code> or <code>REACT_APP_BACKEND_URL</code> to point to a backend that exposes the full
+          Energy Insights API.
+        </div>
+
         {active === "overview" && (
           <div className="grid">
             <section className="card">
