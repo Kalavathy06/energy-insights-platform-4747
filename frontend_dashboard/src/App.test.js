@@ -1,8 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders Energy Insights title", () => {
+test("renders Energy Insights platform banner", () => {
   render(<App />);
-  const title = screen.getByText(/Energy Insights/i);
-  expect(title).toBeInTheDocument();
+  // Query a unique element: the sidebar brand banner has an accessible label.
+  const banner = screen.getByRole("banner", { name: /Energy Insights Platform/i });
+  expect(banner).toBeInTheDocument();
 });
